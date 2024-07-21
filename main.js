@@ -17,6 +17,15 @@ function readFileAsync(filePath) {
 function modifyText(text) {
   return new Promise((resolve, reject) => {
     // TODO: Convert text to uppercase and reverse it
+    try{
+      const upper=text.toUpperCase();
+      const rev=upper.split('').reverse().join('');
+      resolve(rev);
+    }
+    catch(err){
+      reject(err);
+    }
+    
   });
 }
 
